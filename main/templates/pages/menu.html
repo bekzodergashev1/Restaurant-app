@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<section id="menu" class="menu section-bg">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>{% trans 'Menu' %}</h2>
+          <p>{% trans 'Check Our Tasty Menu' %}</p>
+        </div>
+        {% if user.is_superuser %}
+            <a class="btn btn-warning" href="{% url 'create_menu' %}">Create</a>
+        {% endif %}
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              {% for object in categorys %}
+              <li data-filter=".{{object.name}}">{{object.name}}</li>
+              {% endfor %}
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+          {% for object in menus %}
+          <div class="col-lg-4 menu-item {{object.category}}">
+            {% if object.image %}
+
+            <img src="{{object.image.url}}" class="section section-catalog" alt="">
+            {% endif %}
+            <div class="menu-content">
+              <a href="#">{{object.name}}</a><span>{{object.price}} $ </span>
+            </div>
+            <div class="menu-ingredients">
+              {{object.description}}
+            </div>
+            <br>
+            {% if user.is_superuser %}
+            <a class="btn btn-outline-info" href="{% url 'update_menu' object.id %}">Update</a>
+            <a class="btn btn-outline-danger" href="{% url 'delete_menu' object.id  %}">Delete</a>
+            {% endif %}
+          </div>
+
+          {% endfor %}
+
+        </div>
+      </div>
+</section>
+
+
+
+{% endblock %}

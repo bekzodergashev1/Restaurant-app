@@ -1,0 +1,36 @@
+ {% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<section id="book-a-table" class="book-a-table">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Reservation</h2>
+          <p>Book a Table</p>
+        </div>
+
+        <form method="POST">
+          {% csrf_token %}
+            {{ form | crispy }}
+
+          <div class="form-group">
+            {{ form.message }}
+          </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <input class="btn btn-warning" type="submit" name="Create User">
+            </div>
+          </div>
+        </div>
+
+        </form>
+
+      </div>
+    </section>
+ {% endblock %}
