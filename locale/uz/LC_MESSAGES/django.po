@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-04 22:30+0500\n"
+"POT-Creation-Date: 2021-06-09 07:19+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,83 +18,110 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: .\main\templates\pages\about.html:7
-msgid "Hello this is main about page"
+#: .\main\templates\base.html:48
+msgid "Home"
+msgstr "Bosh sahifa"
+
+#: .\main\templates\base.html:51 .\main\templates\pages\menu.html:12
+msgid "Menu"
+msgstr "Menyu"
+
+#: .\main\templates\base.html:54
+msgid "Reservation"
+msgstr "Rezervasyon"
+
+#: .\main\templates\base.html:57
+msgid "About"
+msgstr "Biz haqimizda"
+
+#: .\main\templates\base.html:60
+msgid "Contact Us"
+msgstr "Biz bilan bog'lanish"
+
+#: .\main\templates\pages\about.html:100
+msgid ""
+"Voluptatem dignissimos provident quasi corporis voluptates sit assumenda."
 msgstr ""
+"Voluptatem respectissimos provident quasi corporis voluptates assumenda sit."
 
-#: .\main\templates\pages\contact_us.html:7
-msgid "Hello this is main contact page"
+#: .\main\templates\pages\about.html:106
+msgid "Ullamco laboris nisi ut aliquip ex ea commodo consequat."
+msgstr "Ullamco Laboris nisi ut aliquip ex koma natijasidir."
+
+#: .\main\templates\pages\about.html:107
+msgid "Duis aute irure dolor in reprehenderit in voluptate velit."
+msgstr "Duis aute irure dolor in reprehenderit in voluptate velit."
+
+#: .\main\templates\pages\about.html:108
+msgid ""
+"Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure "
+"dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu "
+"fugiat nulla pariatur."
 msgstr ""
+"Ullamco Laboris nisi ut aliquip ex koma natijasidir. Duis aute irure dolor "
+"reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat "
+"nulla pariatur."
 
-#: .\main\templates\pages\home.html:7
-msgid "Hello this is main home page"
-msgstr "Salomm"
-
-#: .\main\templates\pages\home.html:15
-msgid "Welcome to Restaurantly"
-msgstr "Assalomu alaykum"
-
-#: .\main\templates\pages\home.html:16
-msgid "Delivering great food for more than 18 years!"
-msgstr ""
+#: .\main\templates\pages\home.html:18
+msgid "Welcome to Restaurant"
+msgstr "Restoranga xush kelibsiz"
 
 #: .\main\templates\pages\home.html:19
+msgid "Delivering great food for more than 18 years!"
+msgstr "18 yildan ortiq vaqt davomida ajoyib taomlarni etkazib berish!"
+
+#: .\main\templates\pages\home.html:22
 msgid "Our Menu"
-msgstr ""
+msgstr "Bizning menyu"
 
-#: .\main\templates\pages\home.html:20
+#: .\main\templates\pages\home.html:23
 msgid "Book a Table"
-msgstr ""
+msgstr "Stolga buyurtma bering"
 
-#: .\main\templates\pages\home.html:31
+#: .\main\templates\pages\home.html:34
 msgid "Why Us"
-msgstr ""
+msgstr "Nega biz"
 
-#: .\main\templates\pages\home.html:32
+#: .\main\templates\pages\home.html:35
 msgid "Why Choose Our Restaurant"
-msgstr ""
+msgstr "Nega bizning restoranimizni tanlaysiz?"
 
-#: .\main\templates\pages\home.html:40
+#: .\main\templates\pages\home.html:43
 msgid "Lorem Ipsum"
-msgstr ""
+msgstr "Lorem Ipsum"
 
-#: .\main\templates\pages\home.html:41
+#: .\main\templates\pages\home.html:44
 msgid ""
 "Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur "
 "ducimus vero placeat"
 msgstr ""
+"Ulamco Laboris nisi ut aliquip ex ea commodo natijasida. Joylashtiruvchi "
+"ducimus vero joyi"
 
-#: .\main\templates\pages\home.html:48
+#: .\main\templates\pages\home.html:51
 msgid "Repellat Nihil"
-msgstr ""
+msgstr "Nihilni qaytaring"
 
-#: .\main\templates\pages\home.html:49
+#: .\main\templates\pages\home.html:52
 msgid ""
 "Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor "
 "quod et vel dire leno para dest"
 msgstr ""
+"Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor "
+"quod va vel dire leno para dest"
 
-#: .\main\templates\pages\home.html:56
+#: .\main\templates\pages\home.html:59
 msgid "Ad ad velit qui"
-msgstr ""
+msgstr "Reklama reklamasi"
 
-#: .\main\templates\pages\home.html:57
+#: .\main\templates\pages\home.html:60
 msgid ""
 "Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis "
 "quo vel nam quis"
 msgstr ""
+"Molestiae officiis omnis illo asperiores. Aut doloribus vitae sun'iy debit "
+"quo vel nam quis"
 
-#: .\main\templates\pages\menu.html:10
-msgid "Menu"
-msgstr ""
-
-#: .\main\templates\pages\menu.html:11
+#: .\main\templates\pages\menu.html:13
 msgid "Check Our Tasty Menu"
-msgstr ""
-
-#: .\main\templates\pages\reservation.html:7
-msgid "Hello this is main reservatio page"
-msgstr ""
-
-#~ msgid "Hello this is main menu page"
-#~ msgstr "wwww"
+msgstr "Bizning mazali menyuni tekshiring"

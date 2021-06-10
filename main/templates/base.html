@@ -1,5 +1,7 @@
 <!doctype html>
 {% load static i18n %}
+{% get_available_languages as LANGUAGES %}
+
 
 <html lang="en">
   <head>
@@ -34,33 +36,56 @@
     .hello-msg{
       font-size: 18px;
       color: #fff;
-      margin-right: 20px;
+      margin-right: 20px
     }
   </style>
-    <nav class="navbar navbar-expand-lg navbar-dark text-dark bg-warning">
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-dark text-dark bg-warning">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                                                            aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ">
-        <a  class="nav-link text-dark" href="{% url 'home' %}"><strong>Home</strong></a>
+        <a  class="nav-link text-dark" href="{% url 'home' %}"><strong>{% trans 'Home' %}</strong></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="{% url 'menu' %}"><strong>Menu</strong></a>
+        <a class="nav-link text-dark" href="{% url 'menu' %}"><strong>{% trans 'Menu' %}</strong></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="{% url 'reservation' %}"><strong>Reservation</strong></a>
+        <a class="nav-link text-dark" href="{% url 'reservation' %}"><strong>{% trans 'Reservation' %}</strong></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="{% url 'about' %}"><strong>About</strong></a>
+        <a class="nav-link text-dark" href="{% url 'about' %}"><strong>{% trans 'About' %}</strong></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-dark" href="{% url 'contact_us' %}"><strong>Contact Us</strong></a>
+        <a class="nav-link text-dark" href="{% url 'contact_us' %}"><strong>{% trans 'Contact us' %}</strong></a>
+      </li>
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
       </li>
     </ul>
   </div>
+
+<!--    <form action="/i18n/setlang/" method="POST">{% csrf_token %}-->
+<!--      <input name="next" type="hidden" value="/" />-->
+<!--        {% csrf_token %}-->
+<!--        <select name="language">-->
+<!--          {% for lang in LANGUAGES %}-->
+<!--            <option value="{{ lang.0 }}">{{ lang.1 }}</option>-->
+<!--          {% endfor %}-->
+<!--        </select>-->
+<!--    </form>-->
+
       <span class="hello-msg">Hello-{{request.user}}</span>
       <span><a href="{% url 'logout' %}" >Logout</a></span>
 </nav>

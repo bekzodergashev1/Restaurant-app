@@ -1,5 +1,4 @@
 from django.forms import *
-from mysqlx.protobuf.mysqlx_crud_pb2 import Order
 
 from .views import *
 from .models import *
@@ -10,6 +9,7 @@ class MenuItemForm(ModelForm):
     class Meta:
         model = MenuItem
         fields = "__all__"
+
 
 class ReservationsForm(ModelForm):
     class Meta:
@@ -55,5 +55,3 @@ class CreateUserForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
-
-
