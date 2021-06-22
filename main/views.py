@@ -46,7 +46,8 @@ def Reservation(request):
         form.save()
         return redirect('home')
     form = ReservationsForm()
-    return render(request, 'pages/reservation.html', {'form': form})
+    context = Reservations.objects.all()
+    return render(request, 'pages/reservation.html', {'form': form, 'context': context})
 
 
 @allowed_users(allowed_users=['admin', 'user'])
@@ -55,14 +56,15 @@ def About(request):
 
 
 @allowed_users(allowed_users=['admin', 'user'])
-def Contact_us(request):
+def Contact_Us(request):
     form = ContactsForm(request.POST)
     if form.is_valid():
         form.save()
         return redirect('home')
     form = ContactsForm()
+    context = Contact_us.objects.all()
 
-    return render(request, 'pages/contact_us.html', {'form': form})
+    return render(request, 'pages/contact_us.html', {'form': form, 'context': context})
 
 
 @unauthenticated_user

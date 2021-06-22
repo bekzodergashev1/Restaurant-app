@@ -6,11 +6,13 @@
 
 <section id="hero" class="d-flex align-items-center">
     <div class="container position-relative text-center text-lg-left" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-lg-4 d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="200" style="margin-left: 750px;">
+          <a href="https://www.youtube.com/watch?v=CoAvaYOwm6k" class="venobox play-btn" data-vbtype="video" data-autoplay="true"></a>
+        </div>
       <div class="row">
-
         <div class="col-lg-8">
 
-          <h1 style="margin-top: 35px">{% trans 'Welcome to Restaurant' %}</h1>
+          <h1>{% trans 'Welcome to Restaurant' %}</h1>
           <h2> {% trans 'Delivering great food for more than 18 years!' %}</h2>
 
           <div class="btns">
@@ -18,57 +20,68 @@
             <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">{% trans 'Book a Table' %}</a>
           </div>
         </div>
-          <div class="icon" style="padding-top: 45px; margin-left: 70px; font-size:35px;">
+      </div>
+    </div>
+</section>
+
+      <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Restaurant</h3>
+              <p>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+            <div class="social-links mt-3" style="padding-top: 45px; margin-left: 70px; font-size:35px;">
                 <a href="https://twitter.com/?lang=en" class="twitter" style="margin-left: 30px;"><i class="bx bxl-twitter"></i></a>
                 <a href="https://www.facebook.com" class="facebook"><i class="bx bxl-facebook"></i></a>
                 <a href="https://www.instagram.com/?hl=en" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="https://www.linkedin.com/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-             <div class="col-lg-4 d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="200" style="margin-left: 750px;">
-          <a href="https://www.youtube.com/watch?v=CoAvaYOwm6k" class="venobox play-btn" data-vbtype="video" data-autoplay="true"></a>
-        </div>
-
-<section id="why-us" class="why-us">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>{% trans 'Why Us' %}</h2>
-          <p>{% trans 'Why Choose Our Restaurant' %}</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4">
-            <div class="box" data-aos="zoom-in" data-aos-delay="100">
-              <span>01</span>
-              <h4>{% trans 'Lorem Ipsum' %}</h4>
-              <p>{% trans 'Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat' %}</p>
+                <a href="https://t.me/" class=""><i class="bx bxl-telegram" aria-hidden="true"></i></a>
             </div>
           </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="200">
-              <span>02</span>
-              <h4>{% trans 'Repellat Nihil' %}</h4>
-              <p>{% trans 'Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest' %}</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="300">
-              <span>03</span>
-              <h4>{% trans 'Ad ad velit qui' %}</h4>
-              <p>{% trans 'Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis' %}</p>
-            </div>
-          </div>
-
         </div>
-
-      </div>
-    </section>
-
       </div>
     </div>
-  </section>
+
+
+  </footer>
 
 {% endblock %}

@@ -8,7 +8,7 @@ urlpatterns = [
     path('menu/', Menu, name='menu'),
     path('reservation/', Reservation, name='reservation'),
     path('about/', About, name='about'),
-    path('contact_us/', Contact_us, name='contact_us'),
+    path('contact_us/', Contact_Us, name='contact_us'),
 
     path('register/', Register, name='register'),
     path('login/', Loginpage, name='login'),

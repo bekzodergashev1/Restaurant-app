@@ -20,7 +20,7 @@ class ReservationsForm(ModelForm):
             'email': forms.TextInput(attrs={'placeholder': 'Email'}),
             'phone_number': forms.TextInput(attrs={'placeholder': 'Phone number'}),
             'people': forms.TextInput(attrs={'placeholder': 'People'}),
-            'messages': forms.TextInput(attrs={'placeholder': 'Messages'}),
+            'messages': forms.TextInput(attrs={'placeholder': 'place'}),
         }
 
     def __init__(self, *args, **kwargs):
@@ -29,7 +29,7 @@ class ReservationsForm(ModelForm):
         self.fields['email'].label = ""
         self.fields['phone_number'].label = ""
         self.fields['people'].label = ""
-        self.fields['messages'].label = ""
+        self.fields['place'].label = ""
 
 
 class ContactsForm(ModelForm):
