@@ -17,7 +17,7 @@ from .models import *
 
 
 @login_required(login_url='login')
-@allowed_users(allowed_users=['admin', 'user'])
+@allowed_users(allowed_users=['admin', 'user', 'manager'])
 def home(request, current_language=None):
 
     current_language == request.POST.get('lang')
@@ -31,31 +31,26 @@ def home(request, current_language=None):
     return render(request, 'pages/home.html')
 
 
-@allowed_users(allowed_users=['admin', 'user'])
+@allowed_users(allowed_users=['admin', 'user', 'manager'])
 def Menu(request, *args, **kwargs):
     menus = MenuItem.objects.all()
-    categorys = Category.objects.all()
+    categorys = Menu_category.objects.all()
     context = {'categorys': categorys, 'menus': menus}
     return render(request, 'pages/menu.html', context)
 
 
-@allowed_users(allowed_users=['admin', 'user'])
+@allowed_users(allowed_users=['admin', 'user', 'manager'])
 def Reservation(request):
-    form = ReservationsForm(request.POST)
-    if form.is_valid():
-        form.save()
-        return redirect('home')
-    form = ReservationsForm()
-    context = Reservations.objects.all()
-    return render(request, 'pages/reservation.html', {'form': form, 'context': context})
+
+    return render(request, 'pages/reservation.html')
 
 
-@allowed_users(allowed_users=['admin', 'user'])
+@allowed_users(allowed_users=['admin', 'user', 'manager'])
 def About(request):
     return render(request, 'pages/about.html')
 
 
-@allowed_users(allowed_users=['admin', 'user'])
+@allowed_users(allowed_users=['admin', 'user', 'manager'])
 def Contact_Us(request):
     form = ContactsForm(request.POST)
     if form.is_valid():

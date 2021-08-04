@@ -11,27 +11,6 @@ class MenuItemForm(ModelForm):
         fields = "__all__"
 
 
-class ReservationsForm(ModelForm):
-    class Meta:
-        model = Reservations
-        fields = "__all__"
-        widgets = {
-            'name': forms.TextInput(attrs={'placeholder': 'Name'}),
-            'email': forms.TextInput(attrs={'placeholder': 'Email'}),
-            'phone_number': forms.TextInput(attrs={'placeholder': 'Phone number'}),
-            'people': forms.TextInput(attrs={'placeholder': 'People'}),
-            'messages': forms.TextInput(attrs={'placeholder': 'place'}),
-        }
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['name'].label = ""
-        self.fields['email'].label = ""
-        self.fields['phone_number'].label = ""
-        self.fields['people'].label = ""
-        self.fields['place'].label = ""
-
-
 class ContactsForm(ModelForm):
     class Meta:
         model = Contact_us
