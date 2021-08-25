@@ -1,2 +1,2 @@
-# Restaurant-app
+# Restaurant-project
 ---
